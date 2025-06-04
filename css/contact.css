@@ -59,25 +59,34 @@ button:hover {
   background-color: #e6c200;
 }
 
-
-#confirmation-message {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: #2a2a2a;
-  border-left: 5px solid gold;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-#confirmation-message.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hidden {
+.modal.hidden {
   display: none;
+}
+
+.modal-content {
+  background-color: rgb(0, 0, 0);
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  font-size: 1.2em;
+}
+
+#modal-close-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
